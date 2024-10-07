@@ -1,0 +1,244 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #0d0d0d;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: white;
+}
+
+h1 {
+    color: red;
+    text-align: center;
+    margin-top: 20px;
+}
+
+h3 {
+    color: white;
+    text-align: justify;
+    padding: 20px;
+    line-height: 1.6;
+    max-width: 80%;
+    margin: 0 auto;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #0d0d0d;
+    padding: 15px 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.logo {
+    color: #fff;
+    font-size: 23px;
+    font-weight: bold;
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 20px;
+}
+
+.menu li {
+    position: relative;
+}
+
+.menu a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 15px;
+    transition: background-color 0.3s, color 0.3s, transform 0.3s;
+    border-radius: 5px;
+}
+
+.menu a:hover {
+    background-color: #444;
+    color: #8B0000;
+    transform: scale(1.05);
+}
+
+.menu a::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: #8B0000;
+    transition: width 0.3s, left 0.3s;
+}
+
+.menu a:hover::after {
+    width: 100%;
+    left: 0;
+}
+
+.ge {
+    list-style: none;
+    padding: 20px;
+    text-align: center;
+    font-size: 18px;
+}
+
+.ge li {
+    padding: 5px;
+}
+
+.ge li:hover {
+    color: #8B0000;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 20px;
+}
+
+.video iframe {
+    margin-top: 20px;
+    border: 3px solid red;
+}
+
+footer {
+    background-color: #0d0d0d;
+    padding: 40x 0;
+    color: #f0f0f0;
+    font-size: 14px;
+    border-top: 1px solid #333;
+    position: relative;
+    overflow: hidden;
+    
+
+}
+footer::before {
+    content: '';
+    position: absolute;
+    top: -20px;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background: linear-gradient(to right, #8B0000, #8B0000); /
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    flex-wrap: wrap;
+}
+
+.footer-logo h1 {
+    font-size: 24px;
+    font-weight: 700;
+    color: #fff;
+}
+
+.footer-social {
+    display: flex;
+    gap: 15px;
+}
+
+.social-icon {
+    width: 32px;
+    height: 32px;
+    display: inline-block;
+    background-size: cover;
+    transition: transform 0.3s ease;
+}
+
+.social-icon:hover {
+    transform: scale(1.1);
+}
+
+.instagram {
+    background-image: url('https://cdn-icons-png.flaticon.com/512/2111/2111463.png');
+}
+
+.github {
+    background-image: url('https://cdn-icons-png.flaticon.com/512/733/733553.png');
+}
+
+
+.contact-box {
+    margin-top: 20px;
+}
+
+.question-form {
+    display: flex;
+    gap: 10px;
+}
+
+.question-form input[type="text"] {
+    padding: 10px;
+    border-radius: 20px;
+    border: 1px solid #555;
+    width: 250px;
+    background-color: #222;
+    color: #fff;
+}
+
+.question-form input[type="text"]::placeholder {
+    color: #888;
+}
+
+.question-form button {
+   background-color: #005f8b;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 20px;
+    border: none;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.question-form button:hover {
+    background-color: #fff;
+    color: #8B0000;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 20px;
+    color: #999;
+    font-size: 12px;
+    border-top: 1px solid #333;
+}
+
+
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-social {
+        justify-content: center;
+        margin-bottom: 20px;
+    }
+
+    .contact-box {
+        margin: 10px 0;
+    }
+
+    .question-form input[type="text"] {
+        width: 100%;
+    }
+
+    .question-form button {
+        width: 100%;
+        margin-top: 10px;
+    }
+}
